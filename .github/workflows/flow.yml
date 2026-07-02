@@ -1,0 +1,23 @@
+name: Comandos Linux
+on: [push]
+
+jobs:
+  comandos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: comandos
+        run: whoami
+
+      - name: Ver directorio actual
+        run: pwd
+
+      - name: Ver fecha
+        run: date
+
+      - name: Ver sistema operativo
+        run: uname -a
+
+      - name: Ejecutar multiples comandos
+        run: |
+          echo "Varios comandos en un solo step"
+          ls -la
